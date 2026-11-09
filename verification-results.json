@@ -1,0 +1,230 @@
+{
+  "release": "Docket 1.4.0",
+  "verified": "2026-11-09",
+  "chromiumScenarioChecks": 88,
+  "firefoxScenarioChecks": 45,
+  "responsiveMeasurements": 440,
+  "invoicePDFs": 8,
+  "suites": {
+    "data": {
+      "passed": 9,
+      "tests": [
+        "JSON export preserves complete profile, logo, Unicode and all records",
+        "JSON import preview identifies the file and record counts",
+        "Full export \u2192 clear \u2192 import \u2192 reload is an exact round trip",
+        "Failed import persistence leaves memory and stored records unchanged",
+        "Malformed, duplicate-ID, dangling-reference and overpaid backups are rejected",
+        "Oversized backup rejected before replacing records",
+        "CSV export handles Unicode, quotes, commas, line breaks and formula-like values",
+        "Invoice CSV exports all invoices even with a restrictive status filter",
+        "Restoring the same filename twice is supported"
+      ]
+    },
+    "interactions": {
+      "passed": 11,
+      "tests": [
+        "Destructive confirmation: Cancel and Escape preserve records",
+        "Invalid logo files are rejected without changing profile",
+        "Restore cancellation preserves existing records",
+        "Invoice search and every status filter",
+        "Due date before issue date is rejected",
+        "Invoice project/client mismatch is rejected",
+        "Payment invoice selector updates amount and enforces max",
+        "Reports invoice and expense export buttons download files",
+        "Malformed calendar dates and unsafe project statuses are rejected in backups",
+        "Enter-key form submission creates exactly one client",
+        "Short mobile sidebar scrolls to settings and help"
+      ]
+    },
+    "invoices": {
+      "passed": 9,
+      "tests": [
+        "Invoice shows symbol-based precise amounts, clear dates, tax and partial balance",
+        "Invoice preview remains inside the mobile viewport with a dedicated table scroller",
+        "Tax-free invoice omits tax rows and retains a correct unpaid balance",
+        "Two-part taxes and the rupee symbol print with exact totals",
+        "Zero-decimal invoice totals do not invent fractional yen",
+        "Three-decimal invoice retains the 0.001 outstanding balance",
+        "Fully paid invoice has Paid status and zero balance",
+        "Long references, addresses and descriptions wrap without page-level overflow",
+        "A 70-line invoice prints with repeatable table headers and intact closing totals"
+      ],
+      "errors": []
+    },
+    "layout-chromium": {
+      "checks": 220,
+      "issues": [],
+      "errors": [],
+      "widths": [
+        320,
+        360,
+        390,
+        414,
+        620,
+        768,
+        820,
+        1024,
+        1280,
+        1440,
+        1920
+      ]
+    },
+    "layout-firefox": {
+      "checks": 220,
+      "issues": [],
+      "errors": [],
+      "widths": [
+        320,
+        360,
+        390,
+        414,
+        620,
+        768,
+        820,
+        1024,
+        1280,
+        1440,
+        1920
+      ]
+    },
+    "precision": {
+      "passed": 8,
+      "tests": [
+        "Currency rounding handles decimal half boundaries and multiplication residue",
+        "Unit price formatting retains all six permitted decimals",
+        "Income and expenses aggregate rounded transaction conversions consistently",
+        "Legacy decimal boundaries preserve original totals, not new rounding",
+        "Legacy invoice edit preview agrees with the preserved saved total",
+        "Explicitly changing a migrated invoice currency applies the new currency precision",
+        "Arabic number locale and Unicode tax labels remain valid on narrow screens",
+        "Invalid currency codes, negative FX rates and non-finite converted totals are rejected"
+      ],
+      "errors": []
+    },
+    "pwa-chromium": {
+      "passed": 13,
+      "tests": [
+        "Country search selects by name and keeps the native stored country code",
+        "Currency search finds symbols, names and ISO codes",
+        "No-result searches and Escape leave the selected value unchanged",
+        "Keyboard search and Enter choose an option without submitting onboarding",
+        "Search popup fits a 320px screen and a reduced-height viewport",
+        "Currency symbols render across major currencies with appropriate precision",
+        "Locked base currency stays disabled in the enhanced selector",
+        "Dynamically added default-rate selectors are searchable",
+        "Client selection works inside a modal, with Escape closing only the search",
+        "Manifest, icons and the complete offline cache are available",
+        "Offline reload preserves records and all main navigation routes work",
+        "An offline client can be created and survives another reload",
+        "Installation guidance is available when no native install prompt is exposed"
+      ],
+      "errors": []
+    },
+    "pwa-firefox": {
+      "passed": 13,
+      "tests": [
+        "Country search selects by name and keeps the native stored country code",
+        "Currency search finds symbols, names and ISO codes",
+        "No-result searches and Escape leave the selected value unchanged",
+        "Keyboard search and Enter choose an option without submitting onboarding",
+        "Search popup fits a 320px screen and a reduced-height viewport",
+        "Currency symbols render across major currencies with appropriate precision",
+        "Locked base currency stays disabled in the enhanced selector",
+        "Dynamically added default-rate selectors are searchable",
+        "Client selection works inside a modal, with Escape closing only the search",
+        "Manifest, icons and the complete offline cache are available",
+        "Offline reload preserves records and all main navigation routes work",
+        "An offline client can be created and survives another reload",
+        "Installation guidance is available when no native install prompt is exposed"
+      ],
+      "errors": []
+    },
+    "updates": {
+      "passed": 6,
+      "tests": [
+        "Repository-subpath deployment registers a correctly scoped worker",
+        "A new release waits without reloading or discarding an open form",
+        "Cancelling an update preserves unsaved inputs",
+        "Confirmed update loads the new shell and preserves the exact saved workspace",
+        "Updating one tab does not reload or discard edits in another tab",
+        "Updated repository-subpath app reloads offline with query and hash navigation"
+      ]
+    },
+    "workflows-chromium": {
+      "passed": 32,
+      "tests": [
+        "Fresh workspace has neutral tax defaults, global currency and region controls",
+        "Regional onboarding saves locale, currency, dates and tax configuration",
+        "All navigation routes including Developer work",
+        "Base currency can change before any records exist",
+        "Default manual rates save and duplicate currencies are rejected",
+        "Client CRM preserves generic international tax IDs and pipeline editing",
+        "Project currency and task checklist work independently of base currency",
+        "Invoice currency selection uses default FX rate and previews native and base totals",
+        "EUR VAT invoice prints native amounts, tax label and regional dates",
+        "Partial receipt uses its own saved FX rate; outstanding uses invoice rate",
+        "Unconfigured foreign currency requires a manually supplied rate",
+        "GBP expense converts pre-tax amount to USD; profit and reserve are consistent",
+        "Base reporting currency is locked once records exist",
+        "Changing FX defaults and tax labels never changes historical records",
+        "Invoice currency cannot be changed after payments exist",
+        "Final foreign-currency payment closes invoice and totals cash at receipt rates",
+        "Removing a payment recalculates the original-currency balance",
+        "JPY respects zero-decimal totals and payment increments",
+        "KWD preserves a 0.001 remaining balance instead of marking it paid",
+        "New single-currency USD records force exchange rate 1",
+        "Locale formats and date preferences work without changing monetary data",
+        "Invalid locale is rejected without saving settings",
+        "Global JSON backup contains versioned currency, rate and region metadata",
+        "Global export \u2192 clear \u2192 restore \u2192 reload is an exact data round trip",
+        "CSV exports retain currencies, FX rates and converted reporting totals",
+        "Missing FX metadata and invalid base-currency rates are rejected",
+        "Custom two-part taxes keep their labels and combined total",
+        "Mobile navigation includes Developer and all pages fit",
+        "Legacy INR backup explicitly migrates, preserving original GST and balances",
+        "Legacy subtotal rounding is preserved for fractional line items",
+        "International sample data is optional, internally valid and mixed-currency",
+        "No uncaught JavaScript errors in global end-to-end session"
+      ],
+      "errors": []
+    },
+    "workflows-firefox": {
+      "passed": 32,
+      "tests": [
+        "Fresh workspace has neutral tax defaults, global currency and region controls",
+        "Regional onboarding saves locale, currency, dates and tax configuration",
+        "All navigation routes including Developer work",
+        "Base currency can change before any records exist",
+        "Default manual rates save and duplicate currencies are rejected",
+        "Client CRM preserves generic international tax IDs and pipeline editing",
+        "Project currency and task checklist work independently of base currency",
+        "Invoice currency selection uses default FX rate and previews native and base totals",
+        "EUR VAT invoice prints native amounts, tax label and regional dates",
+        "Partial receipt uses its own saved FX rate; outstanding uses invoice rate",
+        "Unconfigured foreign currency requires a manually supplied rate",
+        "GBP expense converts pre-tax amount to USD; profit and reserve are consistent",
+        "Base reporting currency is locked once records exist",
+        "Changing FX defaults and tax labels never changes historical records",
+        "Invoice currency cannot be changed after payments exist",
+        "Final foreign-currency payment closes invoice and totals cash at receipt rates",
+        "Removing a payment recalculates the original-currency balance",
+        "JPY respects zero-decimal totals and payment increments",
+        "KWD preserves a 0.001 remaining balance instead of marking it paid",
+        "New single-currency USD records force exchange rate 1",
+        "Locale formats and date preferences work without changing monetary data",
+        "Invalid locale is rejected without saving settings",
+        "Global JSON backup contains versioned currency, rate and region metadata",
+        "Global export \u2192 clear \u2192 restore \u2192 reload is an exact data round trip",
+        "CSV exports retain currencies, FX rates and converted reporting totals",
+        "Missing FX metadata and invalid base-currency rates are rejected",
+        "Custom two-part taxes keep their labels and combined total",
+        "Mobile navigation includes Developer and all pages fit",
+        "Legacy INR backup explicitly migrates, preserving original GST and balances",
+        "Legacy subtotal rounding is preserved for fractional line items",
+        "International sample data is optional, internally valid and mixed-currency",
+        "No uncaught JavaScript errors in global end-to-end session"
+      ],
+      "errors": []
+    }
+  }
+}

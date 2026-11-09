@@ -1,0 +1,527 @@
+{
+  "version": 1,
+  "settings": {
+    "name": "Aarohi Studio",
+    "owner": "Aarohi Shah",
+    "email": "hello@aarohistudio.example",
+    "address": "204, The Atelier, Vesu\nSurat, Gujarat 395007",
+    "gstin": "24ABCDE1234F1Z5",
+    "upi": "aarohistudio@upi",
+    "bank": "Sample Bank · Aarohi Studio\nAccount: 0000 1234 5678 · IFSC: DEMO0000123",
+    "prefix": "AS-",
+    "gstRate": 18,
+    "terms": 15,
+    "taxRate": 30,
+    "logo": ""
+  },
+  "clients": [
+    {
+      "id": "c1",
+      "name": "Riya Mehta",
+      "company": "The Good Grain",
+      "email": "riya@goodgrain.example",
+      "phone": "+91 98765 43210",
+      "gstin": "27ABCDE2345G1Z3",
+      "address": "Bandra West, Mumbai, Maharashtra",
+      "source": "Referral",
+      "status": "Won",
+      "followup": "2026-11-10",
+      "notes": "Discuss the next packaging collection."
+    },
+    {
+      "id": "c2",
+      "name": "Arjun Patel",
+      "company": "Niva Living",
+      "email": "arjun@niva.example",
+      "phone": "+91 98250 12345",
+      "gstin": "24ABCDE3456H1Z1",
+      "address": "Satellite, Ahmedabad, Gujarat",
+      "source": "Instagram",
+      "status": "Won",
+      "followup": "2026-11-12",
+      "notes": "Check in on the website handover."
+    },
+    {
+      "id": "c3",
+      "name": "Sneha Rao",
+      "company": "Sunday Coffee Co.",
+      "email": "sneha@sunday.example",
+      "phone": "+91 98123 45678",
+      "gstin": "29ABCDE4567J1Z8",
+      "address": "Indiranagar, Bengaluru, Karnataka",
+      "source": "Website",
+      "status": "Won",
+      "followup": "",
+      "notes": "Monthly creative retainer."
+    },
+    {
+      "id": "c4",
+      "name": "Kabir Sethi",
+      "company": "Studio Form",
+      "email": "kabir@form.example",
+      "phone": "+91 98900 12345",
+      "gstin": "",
+      "address": "New Delhi, Delhi",
+      "source": "Referral",
+      "status": "Proposal",
+      "followup": "2026-11-09",
+      "notes": "Follow up on the brand strategy proposal."
+    },
+    {
+      "id": "c5",
+      "name": "Mira Desai",
+      "company": "Mitti & Co.",
+      "email": "mira@mitti.example",
+      "phone": "+91 99000 11223",
+      "gstin": "",
+      "address": "Surat, Gujarat",
+      "source": "LinkedIn",
+      "status": "Lead",
+      "followup": "2026-11-14",
+      "notes": "Schedule an introductory call."
+    }
+  ],
+  "projects": [
+    {
+      "id": "pr1",
+      "name": "A fresh identity",
+      "client": "c1",
+      "type": "Fixed",
+      "rate": 45000,
+      "start": "2026-10-08",
+      "deadline": "2026-11-19",
+      "status": "Active",
+      "tasks": [
+        {
+          "text": "Brand discovery",
+          "done": true
+        },
+        {
+          "text": "Visual direction",
+          "done": true
+        },
+        {
+          "text": "Packaging design",
+          "done": false
+        }
+      ],
+      "notes": "Brand identity and packaging for a thoughtful pantry."
+    },
+    {
+      "id": "pr2",
+      "name": "A home on the web",
+      "client": "c2",
+      "type": "Fixed",
+      "rate": 65000,
+      "start": "2026-09-25",
+      "deadline": "2026-11-14",
+      "status": "Active",
+      "tasks": [
+        {
+          "text": "Wireframes",
+          "done": true
+        },
+        {
+          "text": "Website design",
+          "done": true
+        },
+        {
+          "text": "Final handover",
+          "done": false
+        }
+      ],
+      "notes": "A calm, considered digital experience."
+    },
+    {
+      "id": "pr3",
+      "name": "The Sunday retainer",
+      "client": "c3",
+      "type": "Retainer",
+      "rate": 30000,
+      "start": "2026-09-05",
+      "deadline": "2026-11-29",
+      "status": "Active",
+      "tasks": [
+        {
+          "text": "Content calendar",
+          "done": true
+        },
+        {
+          "text": "Social creatives",
+          "done": false
+        }
+      ],
+      "notes": "Monthly creative support for the everyday ritual."
+    }
+  ],
+  "invoices": [
+    {
+      "id": "i1",
+      "number": "AS-1001",
+      "date": "2026-10-08",
+      "due": "2026-10-28",
+      "client": "c1",
+      "project": "pr1",
+      "items": [
+        {
+          "description": "Brand identity & packaging",
+          "qty": 1,
+          "rate": 45000
+        }
+      ],
+      "gst": true,
+      "gstRate": 18,
+      "gstType": "igst",
+      "mode": "Bank",
+      "notes": "Thank you for your business. Please include the invoice number with your payment."
+    },
+    {
+      "id": "i2",
+      "number": "AS-1002",
+      "date": "2026-11-02",
+      "due": "2026-11-17",
+      "client": "c2",
+      "project": "pr2",
+      "items": [
+        {
+          "description": "Website design & development",
+          "qty": 1,
+          "rate": 65000
+        }
+      ],
+      "gst": true,
+      "gstRate": 18,
+      "gstType": "split",
+      "mode": "Bank",
+      "notes": "Thank you for your business. Please include the invoice number with your payment."
+    },
+    {
+      "id": "i3",
+      "number": "AS-1003",
+      "date": "2026-11-01",
+      "due": "2026-11-21",
+      "client": "c3",
+      "project": "pr3",
+      "items": [
+        {
+          "description": "Monthly creative retainer",
+          "qty": 1,
+          "rate": 30000
+        }
+      ],
+      "gst": true,
+      "gstRate": 18,
+      "gstType": "igst",
+      "mode": "Bank",
+      "notes": "Thank you for your business. Please include the invoice number with your payment."
+    },
+    {
+      "id": "i4",
+      "number": "AS-1004",
+      "date": "2026-11-01",
+      "due": "2026-11-13",
+      "client": "c1",
+      "project": "pr1",
+      "items": [
+        {
+          "description": "Brand strategy workshop",
+          "qty": 1,
+          "rate": 42000
+        }
+      ],
+      "gst": true,
+      "gstRate": 18,
+      "gstType": "igst",
+      "mode": "Bank",
+      "notes": "Thank you for your business. Please include the invoice number with your payment."
+    },
+    {
+      "id": "i5",
+      "number": "AS-1005",
+      "date": "2026-11-03",
+      "due": "2026-11-24",
+      "client": "c2",
+      "project": "pr2",
+      "items": [
+        {
+          "description": "Landing page design",
+          "qty": 1,
+          "rate": 18000
+        }
+      ],
+      "gst": true,
+      "gstRate": 18,
+      "gstType": "split",
+      "mode": "Bank",
+      "notes": "Thank you for your business. Please include the invoice number with your payment."
+    },
+    {
+      "id": "ih5",
+      "number": "AS-1006",
+      "date": "2026-06-01",
+      "due": "2026-06-15",
+      "client": "c3",
+      "project": "",
+      "items": [
+        {
+          "description": "Design services",
+          "qty": 1,
+          "rate": 62000
+        }
+      ],
+      "gst": true,
+      "gstRate": 18,
+      "gstType": "igst",
+      "mode": "Bank",
+      "notes": "Thank you for your business. Please include the invoice number with your payment."
+    },
+    {
+      "id": "ih4",
+      "number": "AS-1007",
+      "date": "2026-07-01",
+      "due": "2026-07-15",
+      "client": "c2",
+      "project": "",
+      "items": [
+        {
+          "description": "Design services",
+          "qty": 1,
+          "rate": 78000
+        }
+      ],
+      "gst": true,
+      "gstRate": 18,
+      "gstType": "split",
+      "mode": "Bank",
+      "notes": "Thank you for your business. Please include the invoice number with your payment."
+    },
+    {
+      "id": "ih3",
+      "number": "AS-1008",
+      "date": "2026-08-01",
+      "due": "2026-08-15",
+      "client": "c1",
+      "project": "",
+      "items": [
+        {
+          "description": "Design services",
+          "qty": 1,
+          "rate": 72000
+        }
+      ],
+      "gst": true,
+      "gstRate": 18,
+      "gstType": "igst",
+      "mode": "Bank",
+      "notes": "Thank you for your business. Please include the invoice number with your payment."
+    },
+    {
+      "id": "ih2",
+      "number": "AS-1009",
+      "date": "2026-09-01",
+      "due": "2026-09-15",
+      "client": "c3",
+      "project": "",
+      "items": [
+        {
+          "description": "Design services",
+          "qty": 1,
+          "rate": 105000
+        }
+      ],
+      "gst": true,
+      "gstRate": 18,
+      "gstType": "igst",
+      "mode": "Bank",
+      "notes": "Thank you for your business. Please include the invoice number with your payment."
+    },
+    {
+      "id": "ih1",
+      "number": "AS-1010",
+      "date": "2026-10-01",
+      "due": "2026-10-15",
+      "client": "c2",
+      "project": "",
+      "items": [
+        {
+          "description": "Design services",
+          "qty": 1,
+          "rate": 88000
+        }
+      ],
+      "gst": true,
+      "gstRate": 18,
+      "gstType": "split",
+      "mode": "Bank",
+      "notes": "Thank you for your business. Please include the invoice number with your payment."
+    }
+  ],
+  "payments": [
+    {
+      "id": "pa1",
+      "date": "2026-11-04",
+      "invoice": "i2",
+      "amount": 30000,
+      "mode": "Bank",
+      "reference": "DEMO-NEFT-002"
+    },
+    {
+      "id": "pa2",
+      "date": "2026-11-02",
+      "invoice": "i3",
+      "amount": 35400,
+      "mode": "UPI",
+      "reference": "DEMO-UPI-003"
+    },
+    {
+      "id": "pa3",
+      "date": "2026-11-03",
+      "invoice": "i4",
+      "amount": 49560,
+      "mode": "Bank",
+      "reference": "DEMO-NEFT-004"
+    },
+    {
+      "id": "ph5",
+      "date": "2026-06-06",
+      "invoice": "ih5",
+      "amount": 73160,
+      "mode": "Bank",
+      "reference": "DEMO-HISTORY"
+    },
+    {
+      "id": "ph4",
+      "date": "2026-07-06",
+      "invoice": "ih4",
+      "amount": 92040,
+      "mode": "Bank",
+      "reference": "DEMO-HISTORY"
+    },
+    {
+      "id": "ph3",
+      "date": "2026-08-06",
+      "invoice": "ih3",
+      "amount": 84960,
+      "mode": "Bank",
+      "reference": "DEMO-HISTORY"
+    },
+    {
+      "id": "ph2",
+      "date": "2026-09-06",
+      "invoice": "ih2",
+      "amount": 123900,
+      "mode": "Bank",
+      "reference": "DEMO-HISTORY"
+    },
+    {
+      "id": "ph1",
+      "date": "2026-10-06",
+      "invoice": "ih1",
+      "amount": 103840,
+      "mode": "Bank",
+      "reference": "DEMO-HISTORY"
+    }
+  ],
+  "expenses": [
+    {
+      "id": "e1",
+      "date": "2026-11-01",
+      "category": "Software",
+      "vendor": "Figma",
+      "amount": 1500,
+      "gst": 270,
+      "client": "",
+      "project": "",
+      "notes": "Design tools subscription"
+    },
+    {
+      "id": "e2",
+      "date": "2026-11-02",
+      "category": "Workspace",
+      "vendor": "The Workroom",
+      "amount": 8500,
+      "gst": 1530,
+      "client": "",
+      "project": "",
+      "notes": "Monthly coworking desk"
+    },
+    {
+      "id": "e3",
+      "date": "2026-11-03",
+      "category": "Contractors",
+      "vendor": "Dev Patel",
+      "amount": 12000,
+      "gst": 0,
+      "client": "c2",
+      "project": "pr2",
+      "notes": "Frontend development support"
+    },
+    {
+      "id": "e4",
+      "date": "2026-11-04",
+      "category": "Travel",
+      "vendor": "Local travel",
+      "amount": 1800,
+      "gst": 0,
+      "client": "c1",
+      "project": "pr1",
+      "notes": "Client workshop"
+    },
+    {
+      "id": "eh5",
+      "date": "2026-06-04",
+      "category": "Other",
+      "vendor": "Monthly operating costs",
+      "amount": 21000,
+      "gst": 0,
+      "client": "",
+      "project": "",
+      "notes": "Sample historical expenses"
+    },
+    {
+      "id": "eh4",
+      "date": "2026-07-04",
+      "category": "Other",
+      "vendor": "Monthly operating costs",
+      "amount": 26500,
+      "gst": 0,
+      "client": "",
+      "project": "",
+      "notes": "Sample historical expenses"
+    },
+    {
+      "id": "eh3",
+      "date": "2026-08-04",
+      "category": "Other",
+      "vendor": "Monthly operating costs",
+      "amount": 19000,
+      "gst": 0,
+      "client": "",
+      "project": "",
+      "notes": "Sample historical expenses"
+    },
+    {
+      "id": "eh2",
+      "date": "2026-09-04",
+      "category": "Other",
+      "vendor": "Monthly operating costs",
+      "amount": 31000,
+      "gst": 0,
+      "client": "",
+      "project": "",
+      "notes": "Sample historical expenses"
+    },
+    {
+      "id": "eh1",
+      "date": "2026-10-04",
+      "category": "Other",
+      "vendor": "Monthly operating costs",
+      "amount": 24500,
+      "gst": 0,
+      "client": "",
+      "project": "",
+      "notes": "Sample historical expenses"
+    }
+  ],
+  "onboarded": true
+}

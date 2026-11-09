@@ -1,0 +1,17 @@
+{
+  "name": "docket-pwa",
+  "version": "1.4.0",
+  "private": true,
+  "description": "Docket by ClarCraft — offline-first business workspace",
+  "scripts": {
+    "serve": "python -m http.server 3000 --bind 0.0.0.0",
+    "check": "node --check app.js && node --check select-enhancements.js && node --check pwa.js && node --check sw.js",
+    "test": "node tests/run.cjs",
+    "test:pwa": "node tests/pwa.cjs && node tests/updates.cjs",
+    "test:invoices": "node tests/invoices.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.65.0",
+    "prettier": "3.9.10"
+  }
+}
