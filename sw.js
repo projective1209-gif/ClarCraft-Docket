@@ -1,5 +1,5 @@
 /* Bump VERSION for every deployment that changes app-shell files. */
-const VERSION = "1.4.0-android-flat1";
+const VERSION = "1.4.0-android-flat2";
 const PREFIX = `docket:${self.registration.scope}:`;
 const CACHE = PREFIX + VERSION;
 const FILES = [
