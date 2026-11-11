@@ -1,8 +1,10 @@
 /* Bump VERSION for every deployment that changes app-shell files. */
-const VERSION = "1.4.0-settings-icon1";
+const VERSION = "1.4.0-clarcraft-logo1";
 const PREFIX = `docket:${self.registration.scope}:`;
 const CACHE = PREFIX + VERSION;
 const FILES = [
+  "./clarcraft-logo-light.png",
+  "./clarcraft-logo-dark.png",
   "./",
   "./index.html",
   "./style.css",
